@@ -9,8 +9,8 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('name')
-    age = request.form.get('age')
-    return f'Dane przesłane: Imię - {name}, Wiek - {age}'
+    age = request.form.get('email')
+    return f'Dane przesłane: Imię - {name}, E-Mail - {email}'
 
 if __name__ == '__main__':
     app.run(debug=True)
