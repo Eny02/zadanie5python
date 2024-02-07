@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'jdbc:sqlserver://zad5python.database.windows.net:1433;database=Zadanie5python;user=CloudSAbd29a9cc@zad5python;password=Asiblenachli135!;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'Server=tcp:zad5python.database.windows.net,1433;Initial Catalog=Zadanie5python;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication="Active Directory Default";'
 db = SQLAlchemy(app)
 
 class User(db.Model):
